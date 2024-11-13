@@ -1,0 +1,7 @@
+<h1 class="text-center mb-4">Gestor de Tareas</h1>
+<input [(ngModel)]="nuevaTarea" placeholder="Nueva tarea" />
+<button class="btn btn-primary" (click)="agregarTarea()">Agregar Tarea</button>
+
+<div *ngFor="let tarea of tareas; let i = index">
+  <app-tarea [nombre]="tarea" (alEliminar)="eliminarTarea(i)"></app-tarea>
+</div>
