@@ -1,0 +1,7 @@
+<!-- html -->
+<p class="bg-secondary border border-radius">ciclo2 works!</p>
+<button class="btn bg-warning " (click)="mostrarContador = !mostrarContador">
+    {{ mostrarContador ? 'Ocultar' : 'Mostrar' }} Contador
+</button>
+
+<app-contador *ngIf="mostrarContador" [valor]="inicial" (alDestruir)="handleDestruccion()"></app-contador>

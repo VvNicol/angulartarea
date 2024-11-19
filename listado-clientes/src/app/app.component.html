@@ -1,0 +1,8 @@
+<h1 class="text-center mb-3 border-bottom">{{title}}</h1>
+<div class="container">
+  <ul class="list-group">
+    <li *ngFor="let cliente of listaClientes" class="list-group-item">
+      <app-ficha-cliente [clienteDetalle]="cliente" (clienteEliminado)="mensaje($event)"></app-ficha-cliente>
+    </li>
+  </ul>
+</div>

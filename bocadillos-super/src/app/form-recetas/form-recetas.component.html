@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Agregar Nueva Receta</h2>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form (ngSubmit)="addReceta()">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre de la Receta</label>
+                    <input type="text" id="nombre" class="form-control" [(ngModel)]="receta.nombre" name="nombre"
+                        required />
+                </div>
+                <div class="mb-3">
+                    <label for="ingredientes" class="form-label">Ingredientes (separados por comas)</label>
+                    <input type="text" id="ingredientes" class="form-control" [(ngModel)]="receta.ingredientes"
+                        name="ingredientes" placeholder="Ej: Harina de maíz, Agua, Sal" />
+                </div>
+                <div class="mb-3">
+                    <label for="pasos" class="form-label">Pasos (separados por comas)</label>
+                    <textarea id="pasos" class="form-control" [(ngModel)]="receta.pasos" name="pasos"
+                        placeholder="Ej: Mezcla los ingredientes, Forma las arepas, Cocínalas en la parrilla"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Agregar Receta</button>
+            </form>
+        </div>
+    </div>
+</div>

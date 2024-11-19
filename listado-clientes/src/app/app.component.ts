@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { NgFor } from '@angular/common';
+import { FichaClienteComponent } from "./ficha-cliente/ficha-cliente.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NgFor, FichaClienteComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -19,4 +20,7 @@ export class AppComponent {
     {name:'pepe', apellido:'cruz', movil:'55552225', email:'alencito@gmail.com'},
     {name:'ayen', apellido:'amor', movil:'55552225', email:'alencito@gmail.com'}
   ]
+  mensaje(nombre:string){
+    alert(nombre + "eliminado")
+  }
 }

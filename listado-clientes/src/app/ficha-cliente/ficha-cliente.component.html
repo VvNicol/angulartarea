@@ -1,1 +1,11 @@
-<p>ficha-cliente works!</p>
+<div class="card">
+    <h5 class="card-header">
+        cliente: {{clienteDetalle.name}} {{clienteDetalle.apellido}}
+    </h5>
+    <div class="card-body">
+        <h5 class="card-title">correo: {{clienteDetalle.email}}</h5>
+        <p class="card-text">telefono: {{clienteDetalle.movil}}</p>
+        <button href="#" class="btn btn-primary"
+            (click)="eliminarClick(clienteDetalle.name + ' '+ clienteDetalle.apellido)">boton</button>
+    </div>
+</div>

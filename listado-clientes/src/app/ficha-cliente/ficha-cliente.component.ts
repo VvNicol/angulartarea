@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-ficha-cliente',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './ficha-cliente.component.css'
 })
 export class FichaClienteComponent {
+@Input() clienteDetalle: any
+@Output() clienteEliminado = new EventEmitter<string>();
 
+eliminarClick(nombreCompleto: string){
+  this.clienteEliminado.emit(nombreCompleto);
+}
 }
